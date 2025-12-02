@@ -16,7 +16,7 @@
       padding: 0;
       background: #f2f7ff;
       color: #0f1b33;
-      font-size: 20px; /* larger global text */
+      font-size: 20px;
     }
 
     .container {
@@ -27,14 +27,14 @@
 
     h1 {
       margin: 0;
-      font-size: 1.7rem; /* smaller title */
+      font-size: 1.7rem;
       color: #0d2a55;
       font-weight: 700;
     }
 
     .subtitle {
       margin-top: 4px;
-      font-size: 1.15rem; /* larger subtitle */
+      font-size: 1.15rem;
       color: #2e4e7e;
       line-height: 1.6;
     }
@@ -64,14 +64,14 @@
     label {
       font-weight: 600;
       color: #0d2a55;
-      font-size: 1.2rem; /* larger */
+      font-size: 1.2rem;
     }
 
     select {
       width: 100%;
       margin-top: 6px;
       padding: 12px;
-      font-size: 1.1rem; /* larger */
+      font-size: 1.1rem;
       border-radius: 10px;
       border: 2px solid #8fb5e7;
       background: #ffffff;
@@ -80,7 +80,7 @@
     .topic-desc {
       margin: 10px 0;
       color: #284b7a;
-      font-size: 1.05rem; /* larger */
+      font-size: 1.05rem;
     }
 
     .questions-box {
@@ -90,7 +90,7 @@
       border: 1px solid #b6d1f5;
       color: #0d2c57;
       margin-bottom: 15px;
-      font-size: 1.05rem; /* larger */
+      font-size: 1.05rem;
     }
 
     /* ============= Images ============= */
@@ -109,7 +109,7 @@
 
     .img-card img {
       width: 100%;
-      height: 210px; /* increased height */
+      height: 210px;
       object-fit: cover;
       display: block;
     }
@@ -140,13 +140,13 @@
 
     .phrase-header h2 {
       margin: 0;
-      font-size: 1.15rem; /* larger */
+      font-size: 1.15rem;
       color: #06336c;
     }
 
     .phrase-body {
       padding: 6px 16px 10px 20px;
-      font-size: 1.05rem; /* larger */
+      font-size: 1.05rem;
     }
 
     .phrase-body ul {
@@ -185,7 +185,7 @@
 
     .phrase-group-header h2 {
       margin: 0;
-      font-size: 1.15rem; /* larger */
+      font-size: 1.15rem;
       color: #06336c;
     }
 
@@ -196,7 +196,7 @@
 
     .context-help {
       margin: 0 0 4px 0;
-      font-size: 1rem; /* larger */
+      font-size: 1rem;
       color: #43659b;
     }
 
@@ -213,7 +213,7 @@
       gap: 6px;
       box-shadow: 0 2px 6px rgba(0, 32, 84, 0.15);
       margin-bottom: 14px;
-      font-size: 1rem; /* larger */
+      font-size: 1rem;
     }
 
     .inline-timer-label {
@@ -222,7 +222,7 @@
     }
 
     .timer-display {
-      font-size: 1.25rem; /* larger */
+      font-size: 1.25rem;
       font-weight: 700;
       color: #0c2e60;
       min-width: 48px;
@@ -256,7 +256,7 @@
     </header>
 
     <div class="layout">
-      <!-- LEFT: Topic, questions, images, speculating/hesitation -->
+      <!-- LEFT SIDE -->
       <div class="panel">
         <label for="topicSelect">Topic</label>
         <select id="topicSelect"></select>
@@ -279,7 +279,7 @@
         </div>
       </div>
 
-      <!-- RIGHT: Timer + comparing/contrasting + context examples -->
+      <!-- RIGHT SIDE -->
       <div class="panel">
         <div class="inline-timer">
           <span class="inline-timer-label">Speaking:</span>
@@ -314,388 +314,389 @@
     </div>
   </div>
 
-  <script>
-    /* ============= Phrase Bank ============= */
-    const phraseBank = {
-      compare: [
-        "Both pictures show...",
-        "In both photos we can see...",
-        "These two images are similar in that...",
-        "Another thing they have in common is...",
-        "In a similar way...",
-        "Likewise, in the other photo...",
-        "Both situations involve...",
-        "Both images convey the idea that...",
-        "There is a clear similarity between the two...",
-        "In both cases, it appears that...",
-        "They both seem to illustrate...",
-        "Another parallel that can be drawn is..."
-      ],
-      contrast: [
-        "However, in the first picture...",
-        "Whereas in the second image...",
-        "In contrast to the first picture...",
-        "On the other hand...",
-        "The main difference is that...",
-        "Unlike the first image...",
-        "This picture is more about..., while the other focuses on...",
-        "Conversely, in the other photo...",
-        "A striking difference is that...",
-        "The two images differ mainly in terms of...",
-        "This stands in sharp contrast to...",
-        "The situations are almost opposite because..."
-      ],
-      speculate: [
-        "He/She might be feeling...",
-        "They could be experiencing...",
-        "It seems as if...",
-        "They might have decided to...",
-        "Perhaps they are about to...",
-        "It could be that...",
-        "I get the impression that...",
-        "He/She may well be...",
-        "They are likely to be...",
-        "I would imagine that...",
-        "It's quite possible that...",
-        "One possible explanation is that...",
-        "They seem to be in the middle of..."
-      ],
-      hesitation: [
-        "Well, let me think for a moment...",
-        "That's an interesting question...",
-        "I suppose I would say that...",
-        "Let me see...",
-        "What I mean is...",
-        "How can I put this?",
-        "Actually, on second thought...",
-        "I'd probably say that...",
-        "Let me just gather my thoughts...",
-        "If I'm not mistaken...",
-        "I haven't really thought about that before, but...",
-        "Off the top of my head, I'd say...",
-        "I'm not entirely sure, but I'd guess that..."
-      ]
-    };
+<script>
+/* ============= Phrase Bank ============= */
+const phraseBank = {
+  compare: [
+    "Both pictures show...",
+    "In both photos we can see...",
+    "These two images are similar in that...",
+    "Another thing they have in common is...",
+    "In a similar way...",
+    "Likewise, in the other photo...",
+    "Both situations involve...",
+    "Both images convey the idea that...",
+    "There is a clear similarity between the two...",
+    "In both cases, it appears that...",
+    "They both seem to illustrate...",
+    "Another parallel that can be drawn is..."
+  ],
+  contrast: [
+    "However, in the first picture...",
+    "Whereas in the second image...",
+    "In contrast to the first picture...",
+    "On the other hand...",
+    "The main difference is that...",
+    "Unlike the first image...",
+    "This picture is more about..., while the other focuses on...",
+    "Conversely, in the other photo...",
+    "A striking difference is that...",
+    "The two images differ mainly in terms of...",
+    "This stands in sharp contrast to...",
+    "The situations are almost opposite because..."
+  ],
+  speculate: [
+    "He/She might be feeling...",
+    "They could be experiencing...",
+    "It seems as if...",
+    "They might have decided to...",
+    "Perhaps they are about to...",
+    "It could be that...",
+    "I get the impression that...",
+    "He/She may well be...",
+    "They are likely to be...",
+    "I would imagine that...",
+    "It's quite possible that...",
+    "One possible explanation is that...",
+    "They seem to be in the middle of..."
+  ],
+  hesitation: [
+    "Well, let me think for a moment...",
+    "That's an interesting question...",
+    "I suppose I would say that...",
+    "Let me see...",
+    "What I mean is...",
+    "How can I put this?",
+    "Actually, on second thought...",
+    "I'd probably say that...",
+    "Let me just gather my thoughts...",
+    "If I'm not mistaken...",
+    "I haven't really thought about that before, but...",
+    "Off the top of my head, I'd say...",
+    "I'm not entirely sure, but I'd guess that..."
+  ]
+};
 
-    /* ============= Topics & Local Images ============= */
-    const topics = [
-      {
-        id: "hobbies",
-        name: "Hobbies",
-        description: "Different types of leisure and creative activities.",
-        question1: "What benefits might these hobbies offer?",
-        question2: "What challenges could they involve?",
-        images: [
-          "images/hobby1.png",
-          "images/hobbies2.png",
-          "images/hobbies3.png"
-        ]
-      },
-      {
-        id: "education",
-        name: "Education",
-        description: "Different learning environments and methods.",
-        question1: "What benefits might these learning environments offer?",
-        question2: "What drawbacks might they have?",
-        images: [
-          "images/education1.png",
-          "images/education2.png",
-          "images/education3.png"
-        ]
-      },
-      {
-        id: "work",
-        name: "Work & Careers",
-        description: "Different types of jobs and work environments.",
-        question1: "How might these career choices shape personal identity?",
-        question2: "What uncertainties might they bring?",
-        images: [
-          "images/work1.png",
-          "images/work2.png",
-          "images/work3.png"
-        ]
-      },
-      {
-        id: "travel",
-        name: "Travel",
-        description: "Different ways of travelling and exploring.",
-        question1: "How might these travel choices reflect personal values?",
-        question2: "What inconveniences might they involve?",
-        images: [
-          "images/travel1.png",
-          "images/travel2.png",
-          "images/travel3.png"
-        ]
-      },
-      {
-        id: "sport",
-        name: "Sport & Exercise",
-        description: "Different ways of keeping fit and competing.",
-        question1: "What personal achievements might these sports offer?",
-        question2: "What setbacks could individuals face?",
-        images: [
-          "images/sports1.png",
-          "images/sport2.png",
-          "images/sport3.png"
-        ]
-      },
-      {
-        id: "shopping",
-        name: "Shopping & Consumerism",
-        description: "Ways people obtain goods and services.",
-        question1: "How might these shopping trends reflect societal changes?",
-        question2: "What negative aspects could they have?",
-        images: [
-          "images/shopping1.png",
-          "images/shopping2.png",
-          "images/shopping3.png"
-        ]
-      },
-      {
-        id: "environment",
-        name: "The Environment",
-        description: "Environmental protection and impact.",
-        question1: "How could these factors affect the environment?",
-        question2: "What reactions might people have?",
-        images: [
-          "images/environment1.png",
-          "images/environment2.png",
-          "images/environment3.png"
-        ]
-      },
-      {
-        id: "technology",
-        name: "Technology",
-        description: "Technology in daily and professional life.",
-        question1: "How might these technologies influence our lives?",
-        question2: "What disadvantages could they bring?",
-        images: [
-          "images/tech1.png",
-          "images/tech2.png",
-          "images/tech3.png"
-        ]
-      },
-      {
-        id: "health",
-        name: "Health & Lifestyle",
-        description: "Choices affecting physical and mental health.",
-        question1: "How might these lifestyles impact people's health?",
-        question2: "What difficulties could they involve?",
-        images: [
-          "images/health1.png",
-          "images/health2.png",
-          "images/health3.png"
-        ]
-      },
-      {
-        id: "relationships",
-        name: "Relationships & Communication",
-        description: "How people interact and stay connected.",
-        question1: "How might these ways of communicating affect relationships?",
-        question2: "What misunderstandings might arise?",
-        images: [
-          "images/relationships1.png",
-          "images/relationship2.png",
-          "images/relationship3.png"
-        ]
-      },
-      {
-        id: "culture",
-        name: "Culture & Entertainment",
-        description: "Cultural and leisure activities.",
-        question1: "What cultural benefits could these activities offer?",
-        question2: "What limitations might they have?",
-        images: [
-          "images/enterteinment1.png",
-          "images/entertainment2.png",
-          "images/entertainment3.png"
-        ]
-      },
-      {
-        id: "city_vs_country",
-        name: "City vs Countryside",
-        description: "Different living environments.",
-        question1: "How might these environments affect daily life?",
-        question2: "What advantages and disadvantages might they have?",
-        images: [
-          "images/city-country1.png",
-          "images/city-country2.png",
-          "images/city-country3.png"
-        ]
-      },
-      {
-        id: "transport",
-        name: "Transport",
-        description: "Ways people travel in everyday life.",
-        question1: "How might these forms of transport influence daily routines?",
-        question2: "What environmental consequences could they have?",
-        images: [
-          "images/transport1.png",
-          "images/transport2.png",
-          "images/transport3.png"
-        ]
-      },
-      {
-        id: "food",
-        name: "Food & Eating Habits",
-        description: "Different ways of eating and socialising.",
-        question1: "How might these eating habits affect social life?",
-        question2: "What practical problems could they cause?",
-        images: [
-          "images/food1.png",
-          "images/food2.png",
-          "images/food3.png"
-        ]
-      },
-      {
-        id: "future",
-        name: "The Future & Innovation",
-        description: "Technology and upcoming societal change.",
-        question1: "How could these innovations change everyday life?",
-        question2: "What challenges might people face while adapting?",
-        images: [
-          "images/futute-innovation1.png",
-          "images/future2.png",
-          "images/future3.png"
-        ]
-      }
-    ];
+/* ============= Topics & Updated Image Filenames ============= */
+const topics = [
+  {
+    id: "hobbies",
+    name: "Hobbies",
+    description: "Different types of leisure and creative activities.",
+    question1: "What benefits might these hobbies offer?",
+    question2: "What challenges could they involve?",
+    images: [
+      "images/entertainment2-min.png",
+      "images/entertainment3-min.png",
+      "images/enterteinment1-min.png"
+    ]
+  },
+  {
+    id: "education",
+    name: "Education",
+    description: "Different learning environments and methods.",
+    question1: "What benefits might these learning environments offer?",
+    question2: "What drawbacks might they have?",
+    images: [
+      "images/education1-min.png",
+      "images/education2-min.png",
+      "images/education3-min.png"
+    ]
+  },
+  {
+    id: "work",
+    name: "Work & Careers",
+    description: "Different types of jobs and work environments.",
+    question1: "How might these career choices shape personal identity?",
+    question2: "What uncertainties might they bring?",
+    images: [
+      "images/future2-min.png",
+      "images/future3-min.png",
+      "images/futute-innovation1-min.png"
+    ]
+  },
+  {
+    id: "travel",
+    name: "Travel",
+    description: "Different ways of travelling and exploring.",
+    question1: "How might these travel choices reflect personal values?",
+    question2: "What inconveniences might they involve?",
+    images: [
+      "images/city-country1-min.png",
+      "images/city-country2-min.png",
+      "images/city-country3-min.png"
+    ]
+  },
+  {
+    id: "sport",
+    name: "Sport & Exercise",
+    description: "Different ways of keeping fit and competing.",
+    question1: "What personal achievements might these sports offer?",
+    question2: "What setbacks could individuals face?",
+    images: [
+      "images/entertainment2-min.png",
+      "images/entertainment3-min.png",
+      "images/enterteinment1-min.png"
+    ]
+  },
+  {
+    id: "shopping",
+    name: "Shopping & Consumerism",
+    description: "Ways people obtain goods and services.",
+    question1: "How might these shopping trends reflect societal changes?",
+    question2: "What negative aspects could they have?",
+    images: [
+      "images/food1-min.png",
+      "images/food2-min.png",
+      "images/food3-min.png"
+    ]
+  },
+  {
+    id: "environment",
+    name: "The Environment",
+    description: "Environmental protection and impact.",
+    question1: "How could these factors affect the environment?",
+    question2: "What reactions might people have?",
+    images: [
+      "images/environment1-min.png",
+      "images/environment2-min.png",
+      "images/environment3-min.png"
+    ]
+  },
+  {
+    id: "technology",
+    name: "Technology",
+    description: "Technology in daily and professional life.",
+    question1: "How might these technologies influence our lives?",
+    question2: "What disadvantages could they bring?",
+    images: [
+      "images/future2-min.png",
+      "images/future3-min.png",
+      "images/futute-innovation1-min.png"
+    ]
+  },
+  {
+    id: "health",
+    name: "Health & Lifestyle",
+    description: "Choices affecting physical and mental health.",
+    question1: "How might these lifestyles impact people's health?",
+    question2: "What difficulties could they involve?",
+    images: [
+      "images/health1-min.png",
+      "images/health2-min.png",
+      "images/health3-min.png"
+    ]
+  },
+  {
+    id: "relationships",
+    name: "Relationships & Communication",
+    description: "How people interact and stay connected.",
+    question1: "How might these ways of communicating affect relationships?",
+    question2: "What misunderstandings might arise?",
+    images: [
+      "images/education1-min.png",
+      "images/education2-min.png",
+      "images/education3-min.png"
+    ]
+  },
+  {
+    id: "culture",
+    name: "Culture & Entertainment",
+    description: "Cultural and leisure activities.",
+    question1: "What cultural benefits could these activities offer?",
+    question2: "What limitations might they have?",
+    images: [
+      "images/enterteinment1-min.png",
+      "images/entertainment2-min.png",
+      "images/entertainment3-min.png"
+    ]
+  },
+  {
+    id: "city_vs_country",
+    name: "City vs Countryside",
+    description: "Different living environments.",
+    question1: "How might these environments affect daily life?",
+    question2: "What advantages and disadvantages might they have?",
+    images: [
+      "images/city-country1-min.png",
+      "images/city-country2-min.png",
+      "images/city-country3-min.png"
+    ]
+  },
+  {
+    id: "transport",
+    name: "Transport",
+    description: "Ways people travel in everyday life.",
+    question1: "How might these forms of transport influence daily routines?",
+    question2: "What environmental consequences could they have?",
+    images: [
+      "images/city-country1-min.png",
+      "images/city-country3-min.png",
+      "images/city-country2-min.png"
+    ]
+  },
+  {
+    id: "food",
+    name: "Food & Eating Habits",
+    description: "Different ways of eating and socialising.",
+    question1: "How might these eating habits affect social life?",
+    question2: "What practical problems could they cause?",
+    images: [
+      "images/food1-min.png",
+      "images/food2-min.png",
+      "images/food3-min.png"
+    ]
+  },
+  {
+    id: "future",
+    name: "The Future & Innovation",
+    description: "Technology and upcoming societal change.",
+    question1: "How could these innovations change everyday life?",
+    question2: "What challenges might people face while adapting?",
+    images: [
+      "images/futute-innovation1-min.png",
+      "images/future2-min.png",
+      "images/future3-min.png"
+    ]
+  }
+];
 
-    /* ============= DOM References ============= */
-    const topicSelect  = document.getElementById("topicSelect");
-    const topicDesc    = document.getElementById("topicDesc");
-    const questionsEl  = document.getElementById("questions");
-    const imagesGrid   = document.getElementById("imagesGrid");
+/* ============= DOM References ============= */
+const topicSelect = document.getElementById("topicSelect");
+const topicDesc = document.getElementById("topicDesc");
+const questionsEl = document.getElementById("questions");
+const imagesGrid = document.getElementById("imagesGrid");
 
-    const compareList    = document.getElementById("compareList");
-    const contrastList   = document.getElementById("contrastList");
-    const speculateList  = document.getElementById("speculateList");
-    const hesitationList = document.getElementById("hesitationList");
+const compareList = document.getElementById("compareList");
+const contrastList = document.getElementById("contrastList");
+const speculateList = document.getElementById("speculateList");
+const hesitationList = document.getElementById("hesitationList");
 
-    const contextList = document.getElementById("contextList");
-    const contextHelp = document.getElementById("contextHelp");
+const contextList = document.getElementById("contextList");
+const contextHelp = document.getElementById("contextHelp");
 
-    /* ============= Helpers ============= */
-    function buildExampleSentence(category, phrase, topicName) {
-      const lowerTopic = topicName.toLowerCase();
+/* ============= Helper Functions ============= */
+function buildExampleSentence(category, phrase, topicName) {
+  const lowerTopic = topicName.toLowerCase();
 
-      if (category === "compare") {
-        return `${phrase} different aspects of ${lowerTopic}, as shown in these two pictures.`;
-      }
-      if (category === "contrast") {
-        return `${phrase} the two images reveal contrasting attitudes towards ${lowerTopic}.`;
-      }
-      if (category === "speculate") {
-        return `${phrase} the people in the photos are responding to issues connected with ${lowerTopic}.`;
-      }
-      if (category === "hesitation") {
-        return `${phrase} I'm trying to decide how best to describe these pictures about ${lowerTopic}.`;
-      }
-      return phrase;
-    }
+  if (category === "compare") {
+    return `${phrase} different aspects of ${lowerTopic}, as shown in these two pictures.`;
+  }
+  if (category === "contrast") {
+    return `${phrase} the two images reveal contrasting attitudes towards ${lowerTopic}.`;
+  }
+  if (category === "speculate") {
+    return `${phrase} the people in the photos are responding to issues connected with ${lowerTopic}.`;
+  }
+  if (category === "hesitation") {
+    return `${phrase} I'm trying to decide how best to describe these pictures about ${lowerTopic}.`;
+  }
+  return phrase;
+}
 
-    function fillList(ul, items, category) {
-      ul.innerHTML = "";
-      items.forEach(text => {
-        const li = document.createElement("li");
-        li.textContent = text;
-        li.addEventListener("click", () => {
-          const topic = topics.find(t => t.id === topicSelect.value);
-          const topicName = topic ? topic.name : "this topic";
-          const example = buildExampleSentence(category, text, topicName);
-
-          contextHelp.style.display = "none";
-          contextList.innerHTML = "";
-          const exLi = document.createElement("li");
-          exLi.textContent = example;
-          contextList.appendChild(exLi);
-        });
-        ul.appendChild(li);
-      });
-    }
-
-    function populatePhraseBoxes() {
-      fillList(compareList,    phraseBank.compare,    "compare");
-      fillList(contrastList,   phraseBank.contrast,   "contrast");
-      fillList(speculateList,  phraseBank.speculate,  "speculate");
-      fillList(hesitationList, phraseBank.hesitation, "hesitation");
-    }
-
-    function populateTopics() {
-      topics.forEach((topic, index) => {
-        const opt = document.createElement("option");
-        opt.value = topic.id;
-        opt.textContent = `${index + 1}. ${topic.name}`;
-        topicSelect.appendChild(opt);
-      });
-    }
-
-    function renderTopic() {
+function fillList(ul, items, category) {
+  ul.innerHTML = "";
+  items.forEach(text => {
+    const li = document.createElement("li");
+    li.textContent = text;
+    li.addEventListener("click", () => {
       const topic = topics.find(t => t.id === topicSelect.value);
-      if (!topic) return;
+      const topicName = topic ? topic.name : "this topic";
+      const example = buildExampleSentence(category, text, topicName);
 
-      topicDesc.textContent = topic.description;
-      questionsEl.innerHTML = `
-        <strong>Guiding questions:</strong><br>
-        • ${topic.question1}<br>
-        • ${topic.question2}
-      `;
-
-      imagesGrid.innerHTML = "";
-      topic.images.forEach(src => {
-        const card = document.createElement("div");
-        card.className = "img-card";
-        const img = document.createElement("img");
-        img.src = src;
-        img.alt = topic.name;
-        card.appendChild(img);
-        imagesGrid.appendChild(card);
-      });
-
+      contextHelp.style.display = "none";
       contextList.innerHTML = "";
-      contextHelp.style.display = "block";
-    }
+      const exLi = document.createElement("li");
+      exLi.textContent = example;
+      contextList.appendChild(exLi);
+    });
+    ul.appendChild(li);
+  });
+}
 
-    /* ============= Timer Logic ============= */
-    let speakTime = 60;
-    let speakInterval = null;
+function populatePhraseBoxes() {
+  fillList(compareList, phraseBank.compare, "compare");
+  fillList(contrastList, phraseBank.contrast, "contrast");
+  fillList(speculateList, phraseBank.speculate, "speculate");
+  fillList(hesitationList, phraseBank.hesitation, "hesitation");
+}
 
-    function updateSpeakDisplay() {
-      const m = String(Math.floor(speakTime / 60)).padStart(2, "0");
-      const s = String(speakTime % 60).padStart(2, "0");
-      document.getElementById("speakTimer").textContent = `${m}:${s}`;
-    }
+function populateTopics() {
+  topics.forEach((topic, index) => {
+    const opt = document.createElement("option");
+    opt.value = topic.id;
+    opt.textContent = `${index + 1}. ${topic.name}`;
+    topicSelect.appendChild(opt);
+  });
+}
 
-    function startSpeak() {
-      if (speakInterval) return;
-      speakInterval = setInterval(() => {
-        if (speakTime > 0) {
-          speakTime--;
-          updateSpeakDisplay();
-        } else {
-          pauseSpeak();
-        }
-      }, 1000);
-    }
+function renderTopic() {
+  const topic = topics.find(t => t.id === topicSelect.value);
+  if (!topic) return;
 
-    function pauseSpeak() {
-      clearInterval(speakInterval);
-      speakInterval = null;
-    }
+  topicDesc.textContent = topic.description;
+  questionsEl.innerHTML = `
+    <strong>Guiding questions:</strong><br>
+    • ${topic.question1}<br>
+    • ${topic.question2}
+  `;
 
-    function resetSpeak() {
-      pauseSpeak();
-      speakTime = 60;
+  imagesGrid.innerHTML = "";
+  topic.images.forEach(src => {
+    const card = document.createElement("div");
+    card.className = "img-card";
+    const img = document.createElement("img");
+    img.src = src;
+    img.alt = topic.name;
+    card.appendChild(img);
+    imagesGrid.appendChild(card);
+  });
+
+  contextList.innerHTML = "";
+  contextHelp.style.display = "block";
+}
+
+/* ============= Timer Logic ============= */
+let speakTime = 60;
+let speakInterval = null;
+
+function updateSpeakDisplay() {
+  const m = String(Math.floor(speakTime / 60)).padStart(2, "0");
+  const s = String(speakTime % 60).padStart(2, "0");
+  document.getElementById("speakTimer").textContent = `${m}:${s}`;
+}
+
+function startSpeak() {
+  if (speakInterval) return;
+  speakInterval = setInterval(() => {
+    if (speakTime > 0) {
+      speakTime--;
       updateSpeakDisplay();
+    } else {
+      pauseSpeak();
     }
+  }, 1000);
+}
 
-    /* ============= Init ============= */
-    populatePhraseBoxes();
-    populateTopics();
-    topicSelect.addEventListener("change", renderTopic);
-    topicSelect.value = topics[0].id;
-    renderTopic();
-    updateSpeakDisplay();
-  </script>
+function pauseSpeak() {
+  clearInterval(speakInterval);
+  speakInterval = null;
+}
+
+function resetSpeak() {
+  pauseSpeak();
+  speakTime = 60;
+  updateSpeakDisplay();
+}
+
+/* ============= Init ============= */
+populatePhraseBoxes();
+populateTopics();
+topicSelect.addEventListener("change", renderTopic);
+topicSelect.value = topics[0].id;
+renderTopic();
+updateSpeakDisplay();
+</script>
+
 </body>
 </html>
